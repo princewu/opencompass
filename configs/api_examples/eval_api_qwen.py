@@ -14,17 +14,17 @@ datasets = [
 
 models = [
     dict(
-        abbr='qwen-max',
+        abbr='Qwen2.5-7B-Instruct',
         type=Qwen,
-        path='qwen-max',
-        key='xxxxxxxxxxxxxxxx',  # please give you key
+        path="http://10.5.10.8:8999/v1",
+        key='sk-05e2dd6275a9187c77faccfdc730d352',
         generation_kwargs={
             'enable_search': False,
         },
         query_per_second=1,
         max_out_len=2048,
         max_seq_len=2048,
-        batch_size=8
+        batch_size=4
     ),
 ]
 

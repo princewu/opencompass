@@ -7,7 +7,7 @@ from opencompass.utils.text_postprocessors import multiple_select_postprocess
 
 
 cmb_datasets = []
-for split in ['val', 'test']:
+for split in ['val']:
     cmb_reader_cfg = dict(
         input_columns=['exam_type', 'exam_class', 'question_type', 'question', 'option_str'],
         output_column='answer',
@@ -41,7 +41,7 @@ for split in ['val', 'test']:
         dict(
             abbr='cmb' if split == 'val' else 'cmb_test',
             type=CMBDataset,
-            path='./data/CMB/',
+            path='./data/CMB',
             reader_cfg=cmb_reader_cfg,
             infer_cfg=cmb_infer_cfg,
             eval_cfg=cmb_eval_cfg,
